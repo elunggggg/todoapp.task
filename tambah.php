@@ -28,7 +28,7 @@ if(isset($_POST['submit'])){
         <form method="POST">
 
             <div class="task-content">
-                <h4>Judul</h4>
+                <h4>Judul Task</h4>
                 <input type="text" name="title" placeholder="Contoh: Belajar PHP" required style="width:100%; padding:10px; border-radius:10px; border:none;">
             </div>
 
