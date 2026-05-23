@@ -1,0 +1,14 @@
+[12-May-2026 03:11:49 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'todoapps_admin'@'localhost' (using password: YES) in /home/todoapps/public_html/koneksi.php:3
+Stack trace:
+#0 /home/todoapps/public_html/koneksi.php(3): mysqli_connect('localhost', 'todoapps_admin', Object(SensitiveParameterValue), 'todoapps_todo_a...')
+#1 /home/todoapps/public_html/index.php(1): include('/home/todoapps/...')
+#2 {main}
+  thrown in /home/todoapps/public_html/koneksi.php on line 3
+[12-May-2026 10:26:45 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/todoapps/public_html/edit.php on line 38
+[12-May-2026 10:26:45 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/todoapps/public_html/edit.php on line 43
+[12-May-2026 10:26:45 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/todoapps/public_html/edit.php on line 49
+[12-May-2026 10:26:45 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/todoapps/public_html/edit.php on line 50
+[23-May-2026 07:48:24 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/todoapps/public_html/edit.php on line 38
+[23-May-2026 07:48:24 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/todoapps/public_html/edit.php on line 43
+[23-May-2026 07:48:24 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/todoapps/public_html/edit.php on line 49
+[23-May-2026 07:48:24 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/todoapps/public_html/edit.php on line 50
