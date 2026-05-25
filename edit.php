@@ -35,25 +35,44 @@ if(isset($_POST['update'])){
 
             <div class="task-content">
                 <h4>Judul</h4>
-                <input type="text" name="title" value="<?= $d['title']; ?>" required style="width:100%; padding:10px; border-radius:10px; border:none;">
+                <input type="text" 
+                       name="title" 
+                       value="<?= $d['title']; ?>" 
+                       required 
+                       style="width:100%; padding:10px; border-radius:10px; border:none;">
             </div>
 
             <div class="task-content">
                 <h4>Deskripsi</h4>
-                <textarea name="description" style="width:100%; padding:10px; border-radius:10px; border:none;"><?= $d['description']; ?></textarea>
+
+                <textarea 
+                    id="description"
+                    name="description"
+                    style="width:100%; padding:10px; border-radius:10px; border:none;"
+                ><?= $d['description']; ?></textarea>
+
+                <small id="charCount">0 karakter</small>
             </div>
 
             <div class="task-content">
                 <h4>Status</h4>
+
                 <select name="status" style="width:100%; padding:10px; border-radius:10px; border:none;">
-                    <option value="pending" <?= $d['status']=='pending'?'selected':''; ?>>Pending</option>
-                    <option value="done" <?= $d['status']=='done'?'selected':''; ?>>Selesai</option>
+                    <option value="pending" <?= $d['status']=='pending'?'selected':''; ?>>
+                        Pending
+                    </option>
+
+                    <option value="done" <?= $d['status']=='done'?'selected':''; ?>>
+                        Selesai
+                    </option>
                 </select>
             </div>
 
             <div style="display:flex; justify-content:flex-end; gap:10px; margin-top:10px;">
                 <a href="index.php" class="btn">Batal</a>
-                <button type="submit" name="update" class="btn">Update</button>
+                <button type="submit" name="update" class="btn">
+                    Update
+                </button>
             </div>
 
         </form>
@@ -61,3 +80,16 @@ if(isset($_POST['update'])){
     </div>
 
 </div>
+
+<script>
+const textarea = document.getElementById("description");
+const count = document.getElementById("charCount");
+
+function updateCount(){
+    count.innerText = textarea.value.length + " karakter";
+}
+
+textarea.addEventListener("input", updateCount);
+
+updateCount();
+</script>
